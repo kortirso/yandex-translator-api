@@ -14,7 +14,7 @@ module Yandex
 
         attr_reader :api_key, :base_uri
 
-        def initialize(api_key = nil)
+        def initialize(api_key = '')
             @api_key = api_key
             @base_uri = 'https://translate.yandex.net/api/v1.5/tr.json'
         end
@@ -28,7 +28,7 @@ module Yandex
         end
 
         def http_request(address, args)
-            uri = URI("#{base_uri}/#{address}")
+            uri = URI("#{base_uri}#{address}")
             req = Net::HTTP::Post.new(uri)
             req.set_form_data(args.merge(key: api_key))
             Net::HTTP.start(uri.hostname, uri.port, use_ssl: true) { |http| http.request(req) }
