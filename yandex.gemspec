@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
     spec.summary = 'Text translating by Yandex Translator API'
     spec.description = 'Gem for sending words for translation to Yandex Translator API'
-    spec.homepage = 'https://github.com/kortirso/yandex-translate'
+    spec.homepage = 'https://github.com/kortirso/yandex-translator-api'
     spec.license = 'MIT'
 
     spec.files = `git ls-files -z`.split("\x0").reject do |f|
