@@ -26,6 +26,8 @@ Create Translator object.
     translator = Yandex::Translator.new('api_key')
 ```
 
+### Langs
+
 Request for getting possible translation directions is #langs.
 
 ```ruby
@@ -33,6 +35,8 @@ Request for getting possible translation directions is #langs.
 ```
 
     It returns array of possible translations or error.
+
+### Detect
 
 Request for detecting language of the text is #detect.
 
@@ -43,6 +47,8 @@ Request for detecting language of the text is #detect.
     It returns locale of the text or error.
     text - text for detecting, required param
     hint - list of possible languages
+
+### Translate
 
 Request for translating of the text is #translate.
 
