@@ -23,7 +23,7 @@ Or install it yourself as:
 Create Translator object.
 
 ```ruby
-    translator = Yandex::Translator.new('api_key')
+  translator = Yandex::Translator.new('api_key')
 ```
 
 ### Langs
