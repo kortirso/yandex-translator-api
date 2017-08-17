@@ -23,6 +23,7 @@ Or install it yourself as:
 Create Translator object.
 
 ```ruby
+  require 'yandex'
   translator = Yandex::Translator.new('api_key')
 ```
 
