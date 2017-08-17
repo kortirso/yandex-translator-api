@@ -2,7 +2,7 @@ module Yandex
     class Translator
         module Translate
 
-            def translate(args)
+            def translate(args = {})
                 check_args(text: args[:text], to: args[:to])
                 translate_direction = args[:from].nil? ? args[:to] : "#{args[:from]}-#{args[:to]}"
                 response = call('/translate', { lang: translate_direction, text: args[:text] })

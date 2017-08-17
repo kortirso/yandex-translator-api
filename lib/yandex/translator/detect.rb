@@ -2,7 +2,7 @@ module Yandex
     class Translator
         module Detect
 
-            def detect(args)
+            def detect(args = {})
                 check_args(text: args[:text])
                 response = call('/detect', { hint: args[:hint], text: args[:text] })
                 JSON.parse(response.body)['lang']
