@@ -28,32 +28,32 @@ Create Translator object.
 
 Request for getting possible translation directions is #langs.
 
-    It returns array of possible translations or error.
-
 ```ruby
-    translator.langs
+  translator.langs
 ```
 
+    It returns array of possible translations or error.
+
 Request for detecting language of the text is #detect.
+
+```ruby
+  translator.detect text: 'Hello', hint: 'en,de'
+```
 
     It returns locale of the text or error.
     text - text for detecting, required param
     hint - list of possible languages
 
-```ruby
-    translator.detect text: 'Hello', hint: 'en,de'
-```
-
 Request for translating of the text is #translate.
+
+```ruby
+  translator.translate text: 'Hello', from: 'en', to: 'ru'
+```
 
     It returns translated text or error.
     text - text for detecting, required param
     from - language of the text
     to - translating direction, required param
-
-```ruby
-    translator.translate text: 'Hello', from: 'en', to: 'ru'
-```
 
 ## Contributing
 
