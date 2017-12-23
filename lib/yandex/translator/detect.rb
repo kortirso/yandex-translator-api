@@ -1,15 +1,15 @@
 module Yandex
     class Translator
+        # Detection module
         module Detect
-
+            # Detect language
             def detect(args = {})
                 check_args(text: args[:text])
-                response = call('/detect', { hint: args[:hint], text: args[:text] })
-                JSON.parse(response.body)['lang']
+                response = request('/detect', hint: args[:hint], text: args[:text])
+                response.parsed_response['lang']
             rescue YandexFailure => ex
                 return { error: ex.message }
             end
-
         end
     end
 end

@@ -1,14 +1,14 @@
 module Yandex
     class Translator
+        # Available languages module
         module Langs
-
+            # Get list of available languages for translation
             def langs
-                response = call('/getLangs')
-                JSON.parse(response.body)['dirs']
+                response = request('/getLangs')
+                response.parsed_response['dirs']
             rescue YandexFailure => ex
                 return { error: ex.message }
             end
-            
         end
     end
 end
