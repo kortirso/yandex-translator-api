@@ -37,6 +37,18 @@ Request for getting possible translation directions is #langs.
 
     It returns array of possible translations or error.
 
+#### Responces
+
+```ruby
+  {
+    "dirs"=>[
+      "az-ru",
+      "be-bg",
+      "en-ru"
+    ]
+  }
+```
+
 ### Detect
 
 Request for detecting language of the text is #detect.
@@ -48,6 +60,20 @@ Request for detecting language of the text is #detect.
     It returns locale of the text or error.
     text - text for detecting, required param
     hint - list of possible languages
+
+#### Responces
+
+```ruby
+  {
+    "code"=>200,
+    "lang"=>"en"
+  }
+```
+```ruby
+  {
+    :error=>"Bad Request"
+  } 
+```
 
 ### Translate
 
@@ -61,6 +87,21 @@ Request for translating of the text is #translate.
     text - text for detecting, required param
     from - language of the text
     to - translating direction, required param
+
+#### Responces
+
+```ruby
+  {
+    "code"=>200,
+    "lang"=>"en-ru",
+    "text"=>["привет"]
+  }
+```
+```ruby
+  {
+    :error=>"Bad Request"
+  } 
+```
 
 ## Contributing
 

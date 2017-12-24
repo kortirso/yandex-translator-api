@@ -6,7 +6,7 @@ module Yandex
             def detect(args = {})
                 check_args(text: args[:text])
                 response = request('/detect', hint: args[:hint], text: args[:text])
-                response.parsed_response['lang']
+                response.parsed_response
             rescue YandexFailure => ex
                 return { error: ex.message }
             end

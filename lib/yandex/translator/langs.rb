@@ -5,7 +5,7 @@ module Yandex
             # Get list of available languages for translation
             def langs
                 response = request('/getLangs')
-                response.parsed_response['dirs']
+                response.parsed_response
             rescue YandexFailure => ex
                 return { error: ex.message }
             end
