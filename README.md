@@ -24,7 +24,7 @@ Create Translator object.
 
 ```ruby
   require 'yandex'
-  translator = Yandex::Translator.new('api_key')
+  translator = Yandex::Translator.new(api_key: 'api_key')
 ```
 
 ### Langs
