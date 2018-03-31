@@ -1,3 +1,3 @@
 module Yandex
-    VERSION = '1.1.0'.freeze
+  VERSION = '1.2'.freeze
 end

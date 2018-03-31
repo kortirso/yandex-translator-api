@@ -24,7 +24,7 @@ Metrics/CyclomaticComplexity:
   Max: 20
 
 Layout/IndentationWidth:
-  Width: 4
+  Width: 2
 
 Layout/CaseIndentation:
   EnforcedStyle: case
